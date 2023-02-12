@@ -14,13 +14,13 @@ function DownloadButton() {
   // };
 
   const handleDownload = async () => {
-    const response = await fetch("CV_Ryan_Sepkap.pdf");
+    const response = await fetch("CVadmin_Ryan_Sepkap.pdf");
     const blob = await response.blob();
 
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "CV_Ryan_Sepkap.pdf";
+    link.download = "CVadmin_Ryan_Sepkap.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
